@@ -1,7 +1,7 @@
 version: '3'
 services:
   mysql:
-    image: mariadb:latest
+    image: mariadb:10.6.12
     logging:
       driver: none
     command: --max_allowed_packet=1G
