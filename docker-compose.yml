@@ -44,7 +44,10 @@ services:
       - 8080:8080
       - 8443:8443
     environment:
-        DATABASE_HOST: mysql
+      - DATABASE_HOST: mysql
+      - PHP_UPLOAD_MAX_FILESIZE: 1G
+      - PHP_POST_MAX_SIZE: 1G
+      - PHP_MAX_EXECUTION_TIME: 600
     restart: always
     networks:
       - default
